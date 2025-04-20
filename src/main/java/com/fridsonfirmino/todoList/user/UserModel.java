@@ -27,6 +27,9 @@ public class UserModel {
     @CreationTimestamp
     private LocalDateTime createdAt;
 
+    public UUID getId() {
+        return id;
+    }
 
 
     public String getName() {
