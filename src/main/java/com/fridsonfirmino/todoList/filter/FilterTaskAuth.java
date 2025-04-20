@@ -27,7 +27,7 @@ public class FilterTaskAuth extends OncePerRequestFilter {
         // Verifica se o header Authorization existe
         var servletPath = request.getServletPath();
 
-        if(servletPath.equals("/users/create")){
+        if(servletPath.startsWith("/users/")){
             filterChain.doFilter(request, response);
             return;
         }
